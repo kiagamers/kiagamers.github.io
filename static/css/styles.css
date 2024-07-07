@@ -1,0 +1,75 @@
+/* styles.css */
+
+/* Variáveis de Cores */
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-texto: #000;
+    --cor-fundo: #fff;
+}
+
+/* Estilo Geral */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor-primaria);
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Página Inicial */
+.card {
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.embed-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 166.67%; /* 16:9 aspect ratio (9/16 = 0.5625 * 100 = 56.25%) */
+}
+.embed-responsive .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
